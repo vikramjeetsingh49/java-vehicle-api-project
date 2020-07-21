@@ -61,7 +61,7 @@ class CarController {
     @GetMapping("/{id}")
     Resource<Car> get(@PathVariable Long id) {
         Car car = carService.findById(id);
-        return assembler.toResource(new Car());
+        return assembler.toResource(car);
     }
 
     /**
